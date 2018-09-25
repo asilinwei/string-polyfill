@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>camelCase</title>
+</head>
+<body>
+	<script src="../src/camelCase.js"></script>
+	<script type="text/javascript">
+		var str='';
+
+		console.log(str._camelCase());
+		// => ''
+
+		str='FOO  BAR';
+
+		console.log(str._camelCase());
+		// => 'fooBar'
+
+		str='foo bar';
+
+		console.log(str._camelCase());
+		// => 'fooBar'
+
+		str='__FOO__BAR__';
+
+		console.log(str._camelCase());
+		// => 'fooBar'
+
+		str='__foo__bar__';
+
+		console.log(str._camelCase());
+		// => 'fooBar'
+
+		str='__foobar__';
+
+		console.log(str._camelCase());
+		// => 'foobar'
+
+		str='__FOOBAR__';
+
+		console.log(str._camelCase());
+		// => 'foobar'
+
+		str='FOOBAR';
+
+		console.log(str._camelCase());
+		// => 'foobar'
+	</script>
+</body>
+</html>
