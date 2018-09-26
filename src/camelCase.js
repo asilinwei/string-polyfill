@@ -1,23 +1,45 @@
+/**
+ * 2018-09-26
+ * @linwei
+ *
+ * feature like _.camelCase in lodash.
+ * see https://lodash.com/docs/4.17.10#camelCase.
+ *
+ * for example:
+ *
+ * var str = '__FOO__BAR__';
+ *
+ * str._camelCase()
+ * // => 'fooBar'
+ *
+ */
+
 if(!String.prototype._camelCase){
 	String.prototype._camelCase=(function(){
 		"use strict";
+
 		var length=function(x){
 			return x.length;
 		};
+
 		var toLow=function(char){
 			var code=char.charCodeAt();
 			return String.fromCharCode(code+32);
 		};
+
 		var toUp=function(char){
 			var code=char.charCodeAt();
 			return String.fromCharCode(code-32);
 		};
+
 		var isLow=function(char){
 			return char>='a'&&char<='z';
 		};
+
 		var isUp=function(char){
 			return char>='A'&&char<='Z';
 		};
+
 		var process=function(string){
 			var i=0,
 			    str='',
@@ -42,6 +64,7 @@ if(!String.prototype._camelCase){
 			}  
 			return words.join('');  
 		};
+		
 		return function(){
 			return process(this);
 		};
