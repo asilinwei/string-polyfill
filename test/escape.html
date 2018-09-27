@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>escape</title>
+</head>
+<body>
+	<script src="../src/escape.js"></script>
+	<script type="text/javascript">
+		var str='';
+
+		console.log(str._escape());
+		// => ''
+
+		str='hello';
+
+		console.log(str._escape());
+		// => 'hello'
+
+		str='hello & good&boy';
+
+		console.log(str._escape());
+		// => 'hello &amp; good&amp;boy'
+
+		str='hello < good<boy';
+
+		console.log(str._escape());
+		// => 'hello &lt; good&lt;boy'
+
+		str='hello > good>boy';
+
+		console.log(str._escape());
+		// => 'hello &gt; good&gt;boy'
+
+		str='hello "good"boy';
+
+		console.log(str._escape());
+		// => 'hello &quot;good&quot;boy'
+
+		str="hello 'good'boy";
+
+		console.log(str._escape());
+		// => 'hello &apos;good&apos;boy'
+
+		str='hello&good<lo>co"po\'';
+
+		console.log(str._escape());
+		// => 'hello&amp;good&lt;lo&gt;co&quot;po&apos;'
+	</script>
+</body>
+</html>
