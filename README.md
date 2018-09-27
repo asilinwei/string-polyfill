@@ -26,4 +26,22 @@ var string = 'Foo Bar';
 
 string._camelCase()
 // => 'fooBar'
-``` 
+```      
+----------------------------------
+```
+String.prototype._escape
+```   
+[source](https://github.com/asilinwei/string-polyfill/blob/master/src/escape.js)    
+see [_.escape](https://lodash.com/docs/4.17.10#escape) in lodash.    
+     
+Description:     
+Converts the character '&', '<', '>', '"', "'" in string to their    
+corresponding HTML entities.    
+
+Example:   
+```
+var string = 'fred, barney, & pebbles';
+
+string._escape()
+// => 'fred, barney, &amp; pebbles'
+```       
