@@ -1,3 +1,19 @@
+/**
+ * 2018-09-27
+ * @LinWei
+ *
+ * feature like _.escape in lodash.
+ * see https://lodash.com/docs/4.17.10#escape.
+ *
+ * for example:
+ *
+ * var str = 'fred, barney, & pebbles';
+ *
+ * str._escape()
+ * // => 'fred, barney, &amp; pebbles'
+ *
+ */
+
 if (!String.prototype._escape) {
     String.prototype._escape = (function() {
         "use strict";
