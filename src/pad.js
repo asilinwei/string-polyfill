@@ -1,5 +1,6 @@
 /**
- * @copyright 2018-10-03 LinWei
+ * 2018-10-03
+ * @copyright 2018 LinWei
  * @author LinWei
  * 
  * @description 
