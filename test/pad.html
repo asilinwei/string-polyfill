@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pad</title>
+</head>
+<body>
+	<script src="../src/pad.js"></script>
+	<script type="text/javascript">
+		var string='';
+
+		console.log('case1:',string._pad()==='');
+		// => true
+
+		console.log('case2:',string._pad(-1)==='');
+		// => true
+
+		console.log('case3:',string._pad(0)==='');
+		// => true
+
+		console.log('case4:',string._pad(1)===' ');
+		// => true
+
+		console.log('case5:',string._pad(2)==='  ');
+		// => true
+
+		console.log('case6:',string._pad(-1,'a')==='');
+		// => true
+
+		console.log('case7:',string._pad(0,'a')==='');
+		// => true
+
+		console.log('case8:',string._pad(1,'a')==='a');
+		// => true
+
+		console.log('case9:',string._pad(2,'a')==='aa');
+		// => true
+
+		string='abc';
+
+		console.log('case10:',string._pad(-1)==='abc');
+		// => true
+
+		console.log('case11:',string._pad(0)==='abc');
+		// => true
+
+		console.log('case12:',string._pad(1)==='abc');
+		// => true
+
+		console.log('case13:',string._pad(2)==='abc');
+		// => true
+
+		console.log('case14:',string._pad(3)==='abc');
+		// => true
+
+		console.log('case15:',string._pad(4)==='abc ');
+		// => true
+
+		console.log('case16:',string._pad(5)===' abc ');
+		// => true
+
+		console.log('case17:',string._pad(4,'12')==='abc1');
+		// => true
+
+		console.log('case18:',string._pad(5,'12')==='1abc1');
+		// => true
+
+		console.log('case19:',string._pad(6,'12')==='1abc12');
+		// => true
+
+		console.log('case20:',string._pad(7,'12')==='12abc12');
+		// => true
+
+		console.log('case21:',string._pad(8,'12')==='12abc121');
+		// => true
+
+		console.log('case22:',string._pad(9,'12')==='121abc121');
+		// => true
+
+		console.log('case23',string._pad(10,'12')==='121abc1212');
+		// => true
+
+		console.log('case24:',string._pad(11,'12')==='1212abc1212');
+		// => true
+
+		console.log('case25:',string._pad(11.5,'12')==='1212abc1212');
+		// => true
+
+		console.log('case26:',string._pad('11',12)==='1212abc1212');
+		// => true
+
+		console.log('case27:',string._pad(NaN,'12')==='abc');
+		// => true
+	</script>
+</body>
+</html>
