@@ -1,0 +1,23 @@
+{
+  "name": "string-polyfill",
+  "version": "1.0.0",
+  "description": "This repository is about string-polyfill.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asilinwei/string-polyfill.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asilinwei/string-polyfill/issues"
+  },
+  "homepage": "https://github.com/asilinwei/string-polyfill#readme"
+}
