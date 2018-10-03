@@ -44,4 +44,29 @@ var string = 'fred, barney, & pebbles';
 
 string._escape()
 // => 'fred, barney, &amp; pebbles'
-```       
+```          
+-----------------------------------------
+```
+String.prototype._pad
+```     
+[source](https://github.com/asilinwei/string-polyfill/blob/master/src/pad.js)      
+see [_.pad](https://lodash.com/docs/4.17.10#pad) in lodash.
+        
+Description:     
+Pads string on the left and right sides if it is shorter    
+than len. Padding characters are truncated if they can not   
+be evenly divided by len.     
+     
+Example:   
+```
+var string = 'abc';
+
+string._pad(8)
+// => '  abc   '
+
+string._pad(8, '12')
+// => '12abc121'
+
+string._pad(3)
+// => 'abc'
+```             
