@@ -24,6 +24,9 @@ if (!String.prototype._endsWith) {
 			}
 			if (position !== undefined) {
 				pos = Math.floor(+position);
+				if (pos !== pos) {
+					return false;
+				}
 			}
 			return endsWith(this, '' + target, pos);
 		};
